@@ -1,6 +1,7 @@
 package com.jobify.Jobify.Service;
 
 
+import com.jobify.Jobify.Model.Roles;
 import com.jobify.Jobify.Model.Users;
 import com.jobify.Jobify.Repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -19,6 +20,7 @@ public class AuthService {
 
     public Users register(Users user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRole(Roles.USER);
         return userRepository.save(user);
     }
 }

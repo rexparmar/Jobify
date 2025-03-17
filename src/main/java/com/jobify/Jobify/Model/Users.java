@@ -14,7 +14,7 @@ public class Users {
     private String name;
     private String email;
     private String password;
-    private String role;
+    private Roles role;
 
     public void setId(Long id){
         this.id=id;
@@ -48,11 +48,11 @@ public class Users {
         return password;
     }
 
-    public void setRole(String role){
+    public void setRole(Roles role){
         this.role=role;
     }
 
-    public String getRole(){
+    public Roles getRole(){
         return role;
     }
 
